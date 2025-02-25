@@ -55,6 +55,36 @@
   margin: 0 3px;
 }
 
+.header {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header.jpg");
+  background-position: 50%;
+  background-size: cover;
+  position: relative;
+}
+
+.header .header-guitarra {
+  display: none;
+}
+
+@media (min-width: 992px) {
+  .header .header-guitarra {
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-name: animarImagen;
+    z-index: 10;
+  }
+}
+
+table {
+  caption-side: bottom;
+  border-collapse: collapse;
+}
+
 /*!
  * Bootstrap  v5.2.3 (https://getbootstrap.com/)
  * Copyright 2011-2022 The Bootstrap Authors
@@ -212,11 +242,6 @@ a:not([href]):not([class]), a:not([href]):not([class]):hover {
 img,
 svg {
   vertical-align: middle;
-}
-
-table {
-  caption-side: bottom;
-  border-collapse: collapse;
 }
 
 th {
@@ -753,27 +778,5 @@ button:not(:disabled),
   100% {
     opacity: 1;
     transform: translateX(0);
-  }
-}
-.header {
-  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url("img/header.jpg");
-  background-position: 50%;
-  background-size: cover;
-  position: relative;
-}
-.header .header-guitarra {
-  display: none;
-}
-@media (min-width: 992px) {
-  .header .header-guitarra {
-    display: block;
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    animation-duration: 1s;
-    animation-delay: 0s;
-    animation-timing-function: ease-in-out;
-    animation-name: animarImagen;
-    z-index: 10;
   }
 }

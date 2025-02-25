@@ -23,7 +23,7 @@ function App() {
 
                 <Guitarra key={guitar.id} guitar={guitar} addToCart={addToCart} />
 
-                ))}
+              ))}
           </div>
       </main>
 

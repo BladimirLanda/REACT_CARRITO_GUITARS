@@ -5,11 +5,12 @@ import type { Guitar, CartItem } from "../types/types";
 
 const useCar = () => {
     //--Variables
+    const MAX_ITEMS = 5;
+    
     const initialCart = () : CartItem[] => {
         const getCart = localStorage.getItem('cart');
         return getCart ? JSON.parse(getCart) : [];
     };
-    const MAX_ITEMS = 5;
 
     //--State
     const [ data ] = useState(db);
@@ -28,12 +29,12 @@ const useCar = () => {
         const itemExists = cart.findIndex(guitar => guitar.id === item.id);
 
         if(itemExists >= 0) {
-        if(cart[itemExists].quantity === MAX_ITEMS) { return }
+            if(cart[itemExists].quantity === MAX_ITEMS) { return }
 
-        const updateCart = [...cart];
-        updateCart[itemExists].quantity++;
-        setCart(updateCart);
-        return;
+            const updateCart = [...cart];
+            updateCart[itemExists].quantity++;
+            setCart(updateCart);
+            return;
         }
 
         //--TS Type
@@ -54,9 +55,9 @@ const useCar = () => {
         const itemExists = cart.findIndex(guitar => guitar.id === id);
 
         if(cart[itemExists].quantity < MAX_ITEMS) { 
-        const updateCart = [...cart];
-        updateCart[itemExists].quantity++;
-        setCart(updateCart);
+            const updateCart = [...cart];
+            updateCart[itemExists].quantity++;
+            setCart(updateCart);
         }
     }
 
@@ -66,8 +67,8 @@ const useCar = () => {
         const itemExists = cart.findIndex(guitar => guitar.id === id);
 
         if(cart[itemExists].quantity === 1) {
-        setCart(prevCart => prevCart.filter(guitar => guitar.id !== id));
-        return;
+            setCart(prevCart => prevCart.filter(guitar => guitar.id !== id));
+            return;
         }
 
         const updateCart = [...cart];

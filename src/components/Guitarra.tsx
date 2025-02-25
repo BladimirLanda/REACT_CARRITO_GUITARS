@@ -9,11 +9,12 @@ type GuitarProps = {
 
 //--TS setType
 function Guitarra( { guitar, addToCart } : GuitarProps ) {
+    //Variables
     const { name, image, description, price } = guitar;
 
     //--View--//
     return (
-        <div className="row col-md-6 col-lg-4 my-4 align-items-center">
+        <div className="my-4 row col-md-6 col-lg-4 align-items-center">
             <div className="col-4">
                 <img className="img-fluid" src={ `img/${image}.jpg` } alt="imagen guitarra" />
             </div>
@@ -23,7 +24,7 @@ function Guitarra( { guitar, addToCart } : GuitarProps ) {
 
                 <p>{ description }</p>
 
-                <p className="fw-black text-primary fs-3">${ price }</p>
+                <p className="fs-3 fw-black text-primary">${ price }</p>
                 
                 <button 
                     type="button"

@@ -3,9 +3,9 @@
 function Footer() {
   //--View--//
   return (
-    <footer className="bg-dark mt-5 py-5">
+    <footer className="mt-5 py-5 bg-dark ">
         <div className="container-xl">
-            <p className="text-white text-center fs-4 mt-4 m-md-0">GuitarLA - Todos los derechos Reservados</p>
+            <p className="mt-4 m-md-0 text-white text-center fs-4">GuitarLA - Todos los derechos Reservados</p>
         </div>
     </footer>
   )

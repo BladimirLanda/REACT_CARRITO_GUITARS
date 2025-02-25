@@ -17,7 +17,7 @@ function Header( { cart, isEmpty, cartTotal ,removeFromCart, clearCart, increase
                 : HeaderProps ) {
     //--View--//
     return (
-        <header className="py-5 header">
+        <header className="header py-5">
             <div className="container-xl">
                 <div className="row justify-content-center justify-content-md-between">
                     <div className="col-8 col-md-3">
@@ -35,7 +35,7 @@ function Header( { cart, isEmpty, cartTotal ,removeFromCart, clearCart, increase
                                     <p className="text-center">El carrito está vacio</p>
                                 ) : (
                                     <>
-                                        <table className="w-100 table">
+                                        <table className="table w-100">
                                             <thead>
                                                 <tr>
                                                     <th>Imagen</th>
@@ -50,7 +50,8 @@ function Header( { cart, isEmpty, cartTotal ,removeFromCart, clearCart, increase
                                                 {cart.map(guitar => (
                                                     <tr key={guitar.id}>
                                                         <td>
-                                                            <img className="img-fluid" src={ `img/${guitar.image}.jpg` } alt="imagen guitarra" />
+                                                            <img className="img-fluid" src={ `img/${guitar.image}.jpg` } 
+                                                            alt="imagen guitarra" />
                                                         </td>
 
                                                         <td>{guitar.name}</td>
@@ -92,7 +93,7 @@ function Header( { cart, isEmpty, cartTotal ,removeFromCart, clearCart, increase
                                         </table>
 
                                         <p className="text-end">Total pagar: 
-                                        <span className="fw-bold">${ cartTotal }</span>
+                                            <span className="fw-bold">${ cartTotal }</span>
                                         </p>
                                     </>
                                 )}
