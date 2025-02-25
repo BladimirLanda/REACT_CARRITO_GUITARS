@@ -1,5 +1,4 @@
 //COMPONENTE GUITARRA
-
 import type { Guitar } from "../types/types";
 
 //--TS: Type

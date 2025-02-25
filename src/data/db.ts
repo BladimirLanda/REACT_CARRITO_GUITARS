@@ -1,5 +1,4 @@
 //DATA
-
 import type { Guitar } from "../types/types"
 
 //--TS Type

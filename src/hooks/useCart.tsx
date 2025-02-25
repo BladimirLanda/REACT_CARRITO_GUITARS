@@ -1,5 +1,4 @@
 //CUSTOM HOOK
-
 import { useState, useEffect, useMemo } from "react"
 import { db } from "../data/db"
 import type { Guitar, CartItem } from "../types/types";

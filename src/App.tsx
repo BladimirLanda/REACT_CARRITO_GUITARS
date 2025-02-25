@@ -1,5 +1,4 @@
 //COMPONENTE APP
-
 import useCar from "./hooks/useCart"
 import Header from "./components/Header"
 import Guitarra from "./components/Guitarra"
